@@ -28,20 +28,20 @@ df.head()
 
 # In[4]:
 
-
+#creating difference column 
 df['difference']=df['high']-df['low']
 df.head()
 
 
 # In[5]:
 
-
+#converting dataframe to csv
 df.to_csv('C:/assignment/processed_data.csv')
 
 
 # In[6]:
 
-
+#csv to dataframe
 co=pd.read_csv('C:/assignment/processed_data.csv')
 plt.figure(figsize=(15,15))
 corr=co.corr()
@@ -51,19 +51,18 @@ plt.show()
 
 # In[7]:
 
-
+#connecting to dbms
 import mysql.connector as dbms
 
 
 # In[8]:
 
-
+#creating a connection object
 db=dbms.connect(host="localhost",user='root',passwd="111PythonFinTest###",database='python_fin_test')
 
 
 # In[9]:
-
-
+#creating a cursor
 cursor=db.cursor()
 
 
@@ -76,34 +75,27 @@ col
 
 # In[ ]:
 
-
+#create statement
 cr="create table processed_data(Ind INT(4),date1 varchar2(20),high FLOAT(10,7),low FLOAT(10,7),ClosePrice FLOAT(10,7),Total_traded_quantity INT(11),turnover_in_lakhs FLOAT(10,7),contracts INT(3),Unnamed FLOAT(10,7),difference FLOAT(10,7));"
 
 
 # In[11]:
 
 
-
+#replacing missing values
 co.fillna(-1.0,inplace=True)
 co.isnull().sum()
 
 
 # In[ ]:
 
-
-s="DROP TABLE processed_data"
-cursor.execute(s)
-
-
-# In[ ]:
-
-
+#creating table
 cursor.execute(cr)
 
 
 # In[ ]:
-
-
+#inserting values from csv to table
+#%s indicates string values
 for i,row in co.iterrows():
             #here %S means string values 
             sql = "INSERT INTO processed_data VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
