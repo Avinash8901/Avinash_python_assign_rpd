@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 
 
 #reading a csv document and converting to data frame we use read_csv function
-df=pd.read_csv("HDFCBANK_01-01-2021_27-09-2021.csv")
+df=pd.read_csv("https://github.com/Avinash8901/Avinash_python_assign_rpd/blob/b2003c7b80c0e233f1da5f7ffd3fd7d012429cee/HDFCBANK_01-01-2021_27-09-2021.csv")
 df.head()
 
 
