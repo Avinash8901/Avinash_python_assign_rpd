@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 
 
 #reading a csv document and converting to data frame we use read_csv function
-df=pd.read_csv("C:/Users/Avinash/Downloads/HDFCBANK_01-01-2021_27-09-2021.csv")
+df=pd.read_csv("HDFCBANK_01-01-2021_27-09-2021.csv")
 df.head()
 
 
@@ -36,13 +36,13 @@ df.head()
 # In[5]:
 
 #converting dataframe to csv
-df.to_csv('C:/assignment/processed_data.csv')
+df.to_csv('processed_data.csv')
 
 
 # In[6]:
 
 #csv to dataframe
-co=pd.read_csv('C:/assignment/processed_data.csv')
+co=pd.read_csv('processed_data.csv')
 plt.figure(figsize=(15,15))
 corr=co.corr()
 sns.heatmap(corr,cmap='Greens',annot=True)
