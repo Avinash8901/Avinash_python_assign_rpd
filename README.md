@@ -12,4 +12,4 @@ Step 3:uploading it into csv file by to_csv method<br/>
 3)Now install mysql.installer using pip and import into our python program<br/>
 4)Now create a connection object using connect method by providing all the credentials and database details<br/>
 5)Create a cursor for our connection object<br/>
-6)execute the required queries<br/>
+6)execute the required queries using execute method<br/>
