@@ -6,6 +6,9 @@ Step 1: Import all the required libraries:-<br/>
         iii)matplotlib.pyplot for creating figures<br/>
 Step 2:Renaming the columns using dictionary and rename function<br/>
 Step 3:uploading it into csv file by to_csv method<br/>
+Step 4:Creating a plot for correlation matrix using matplotlib<br/>
+Step 5:Create a coorelation matrix using corr method and plot using sns heatmap method.<br/>
+
 **Connecting with mysql**<br/>
 1)install mysql installer from google chrome<br/>
 2)Create a password for accessing connections and execute the connectors installation instructions.<br/>
