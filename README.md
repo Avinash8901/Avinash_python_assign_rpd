@@ -12,7 +12,7 @@ Step 5:Create a coorelation matrix using corr method and plot using sns heatmap 
 **Connecting with mysql**<br/>
 1)install mysql installer from google chrome<br/>
 2)Create a password for accessing connections and execute the connectors installation instructions.<br/>
-3)Now install mysql.installer using pip and import into our python program<br/>
+3)Now install mysql.connector using pip and import into our python program<br/>
 4)Now create a connection object using connect method by providing all the credentials and database details<br/>
 5)Create a cursor for our connection object<br/>
 6)execute the required queries using execute method<br/>
